@@ -1,0 +1,7 @@
+- hosts: aws-instances
+  remote_user: ec2-user
+  become: true
+  tasks:
+  - import_role:
+      name: jenkins
+  tags: jenkins
